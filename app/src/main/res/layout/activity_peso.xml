@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77CC40"
+    tools:context=".peso">
+
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:text="Resultado: "
+        app:layout_constraintEnd_toStartOf="@+id/etPeso"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbFemenino" />
+
+    <EditText
+        android:id="@+id/etBase"
+        android:layout_width="188dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBase"
+        app:layout_constraintTop_toBottomOf="@+id/etPeso" />
+
+    <TextView
+        android:id="@+id/tvBase"
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="Altura (m):"
+        app:layout_constraintEnd_toStartOf="@+id/etBase"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPeso" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="77dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:text="IMC"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="136dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:srcCompat="@drawable/descarga" />
+
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Peso (kg): "
+        app:layout_constraintEnd_toStartOf="@+id/etPeso"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="190dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <CheckBox
+        android:id="@+id/cbFemenino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="56dp"
+        android:text="Femenino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBase" />
+
+    <CheckBox
+        android:id="@+id/cbMasculino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="108dp"
+        android:text="Masculino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cbFemenino"
+        app:layout_constraintTop_toBottomOf="@+id/etBase" />
+
+    <Button
+        android:id="@+id/btPesoIdeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="setBtPesoIdeal"
+        android:text="Peso Ideal"
+        app:layout_constraintEnd_toStartOf="@+id/btBorrar"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+    <Button
+        android:id="@+id/btIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:onClick="imc"
+        android:text="IMC"
+        app:layout_constraintEnd_toStartOf="@+id/btPesoIdeal"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+    <Button
+        android:id="@+id/btBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="borrar"
+        android:text="Borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+    <Button
+        android:id="@+id/btCalculadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="Calculadora"
+        app:layout_constraintEnd_toStartOf="@+id/btCalcularIMC"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btIMC" />
+
+    <Button
+        android:id="@+id/btCalcularIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:text="Calculadora Area"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBorrar" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="205dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toEndOf="@+id/tvResultado"
+        app:layout_constraintTop_toBottomOf="@+id/cbMasculino" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

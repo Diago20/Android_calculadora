@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5E8698"
+    tools:context=".area">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="410dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        android:background="#273061"
+        android:text="Calculadora de Area"
+        android:textAlignment="center"
+        android:textColor="#EDE3E3"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="152dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="112dp"
+        android:paddingTop="5dp"
+        android:text="Sacar Area de:  "
+        android:textAlignment="center"
+        android:textColor="#0B0A0A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <RadioGroup
+        android:id="@+id/rgContenedor"
+        android:layout_width="312dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/rbCuadrado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cuadrado" />
+
+        <RadioButton
+            android:id="@+id/rbCirculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Circulo" />
+
+        <RadioButton
+            android:id="@+id/rbRectangulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rectangulo" />
+
+        <RadioButton
+            android:id="@+id/rbTriangulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Triangulo" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="157dp"
+        android:layout_height="24dp"
+        android:text="Seleccionar una opcion"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <Button
+        android:id="@+id/btSeleccionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:backgroundTint="#8D90CF"
+        android:text="Seleccionar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgContenedor" />
+
+    <Button
+        android:id="@+id/btCalcularIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#8D90CF"
+        android:text="Calculadora IMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btCalculadora"
+        app:layout_constraintTop_toBottomOf="@+id/btSeleccionar" />
+
+    <Button
+        android:id="@+id/btCalculadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#8D90CF"
+        android:text="Calculadora"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSeleccionar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
